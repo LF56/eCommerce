@@ -4,12 +4,14 @@ const sequelize = require('../config/connection.js');
 
 class Tag extends Model {}
 
-//id- integer, no null values, set primary keu, auto incremeent
-
-
 Tag.init(
   {
-    // define columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    }
   },
   {
     sequelize,
